@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wishify</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- INTRO SCREEN -->
+<div class="intro active" id="intro">
+  <div class="intro-content">
+    <h1 class="app-name">Wishify</h1>
+    <p class="tagline">Make birthdays unforgettable 🎂</p>
+    <button id="startBtn">Start</button>
+  </div>
+</div>
+
+<!-- DISCO + NAME -->
+<div class="brand">
+  <span class="disco">🪩</span>
+  <span class="brand-name">Wishify</span>
+</div>
+
+<div class="page" id="app">
+
+  <!-- STEP 1 -->
+  <div class="controls step active">
+    <h2>Select your cake</h2>
+
+    <div class="cake-options">
+      <img src="cakes/cake1.jpeg" class="cake-option active">
+      <img src="cakes/cake2.jpeg" class="cake-option">
+      <img src="cakes/cake3.jpeg" class="cake-option">
+      <img src="cakes/cake4.jpeg" class="cake-option">
+      <img src="cakes/cake5.jpeg" class="cake-option">
+    </div>
+
+    <button class="next">Next</button>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="controls step">
+    <h2>Write your message</h2>
+
+    <input type="text" id="toInput" placeholder="To">
+    <textarea id="messageInput" placeholder="Write your message..."></textarea>
+    <input type="text" id="fromInput" placeholder="From">
+
+    <button class="next">Next</button>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="controls step">
+    <h2>Your card is ready</h2>
+
+    <button id="downloadBtn">Download Card</button>
+    <button id="shareBtn">Share Link</button>
+  </div>
+
+  <!-- CARD -->
+  <div class="card" id="card">
+    <img src="cakes/cake1.jpeg" id="selectedCake" class="cake-image">
+
+    <h1>Happy Birthday!</h1>
+
+    <div class="field">
+      <label>To</label>
+      <p id="toText">Someone Special</p>
+    </div>
+
+    <div class="field">
+      <label>Message</label>
+      <p id="messageText">Your birthday card will appear here ✨</p>
+    </div>
+
+    <div class="field from">
+      <label>From</label>
+      <p id="fromText">— You</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  Built with 💗 by Charu 👩🏻‍💻
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

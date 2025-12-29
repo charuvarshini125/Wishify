@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #b11226;
+}
+
+/* INTRO */
+.intro {
+  position: fixed;
+  inset: 0;
+  background: #b11226;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.intro.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.intro-content {
+  background: #f6efe6;
+  padding: 40px 32px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0,0,0,.3);
+  animation: popIn 0.8s ease;
+}
+
+.app-name {
+  font-size: 36px;
+  color: #3a1d1d;
+  margin-bottom: 8px;
+  animation: glow 2s infinite;
+}
+
+.tagline {
+  font-size: 14px;
+  color: #6b4b4b;
+  margin-bottom: 20px;
+}
+
+.intro button {
+  padding: 12px 28px;
+  border-radius: 14px;
+  border: none;
+  background: #b11226;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ANIMATIONS */
+@keyframes popIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  0% { letter-spacing: 1px; }
+  50% { letter-spacing: 3px; }
+  100% { letter-spacing: 1px; }
+}
+
+/* EXISTING APP */
+.disco {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  font-size: 28px;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.controls {
+  background: #f6efe6;
+  padding: 24px;
+  width: 280px;
+  border-radius: 20px;
+  box-shadow: 0 14px 35px rgba(0,0,0,.25);
+}
+
+.step { display: none; }
+.step.active { display: block; }
+
+.cake-options {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.cake-option {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.cake-option.active {
+  border-color: #b11226;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: 1px solid #d6cbbd;
+}
+
+textarea {
+  height: 80px;
+  resize: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: #b11226;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.card {
+  background: #f6efe6;
+  padding: 32px;
+  width: 380px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 22px 45px rgba(0,0,0,.3);
+}
+
+.cake-image {
+  width: 120px;
+  margin-bottom: 14px;
+}
+
+.field {
+  background: #fffaf4;
+  padding: 14px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  text-align: left;
+}
+
+.from {
+  background: #f0d9c9;
+}
+/* BRAND (DISCO + NAME) */
+.brand {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
+}
+
+
+.brand-name {
+  font-size: 14px;
+  color: #f6efe6;
+  font-weight: 500;
+}
+
+/* FOOTER */
+.footer {
+  position: fixed;
+  bottom: 14px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #f6efe6;
+  opacity: 0.85;
+}
